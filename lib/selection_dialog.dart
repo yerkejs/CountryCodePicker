@@ -15,6 +15,7 @@ class SelectionDialog extends StatefulWidget {
   final Size size;
   final bool hideSearch;
   final Icon closeIcon;
+  final String no_country_found_text;
 
   /// elements passed as favorite
   final List<CountryCode> favoriteElements;
@@ -34,6 +35,7 @@ class SelectionDialog extends StatefulWidget {
     this.size,
     this.hideSearch = false,
     this.closeIcon,
+    this.no_country_found_text
   })  : assert(searchDecoration != null, 'searchDecoration must not be null!'),
         this.searchDecoration = searchDecoration.prefixIcon == null
             ? searchDecoration.copyWith(prefixIcon: Icon(Icons.search))
@@ -164,7 +166,7 @@ class _SelectionDialogState extends State<SelectionDialog> {
     }
 
     return Center(
-      child: Text('No country found'),
+      child: Text(no_country_found_text),
     );
   }
 
