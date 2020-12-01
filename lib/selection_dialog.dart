@@ -166,7 +166,7 @@ class _SelectionDialogState extends State<SelectionDialog> {
     }
 
     return Center(
-      child: Text(no_country_found_text),
+      child: Text(widget.no_country_found_text),
     );
   }
 
