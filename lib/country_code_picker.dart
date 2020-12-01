@@ -68,6 +68,8 @@ class CountryCodePicker extends StatefulWidget {
   /// Set to true if you want to hide the search part
   final bool hideSearch;
 
+  final String noCountryFoundText;
+    
   CountryCodePicker({
     this.onChanged,
     this.onInit,
@@ -98,6 +100,7 @@ class CountryCodePicker extends StatefulWidget {
     this.hideSearch = false,
     this.dialogSize,
     this.closeIcon = const Icon(Icons.close),
+    this.noCountryFoundText
     Key key,
   }) : super(key: key);
 
@@ -262,6 +265,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
           size: widget.dialogSize,
           hideSearch: widget.hideSearch,
           closeIcon: widget.closeIcon,
+          no_country_found_text: noCountryFoundText
         ),
       ),
     ).then((e) {
