@@ -265,7 +265,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
           size: widget.dialogSize,
           hideSearch: widget.hideSearch,
           closeIcon: widget.closeIcon,
-          no_country_found_text: noCountryFoundText
+          no_country_found_text: widget.noCountryFoundText
         ),
       ),
     ).then((e) {
